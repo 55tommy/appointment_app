@@ -13,12 +13,13 @@
 ActiveRecord::Schema.define(version: 2022_11_11_042437) do
 
   create_table "appointments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "appointment_date", null: false
-    t.string "appointment_time", null: false
+    t.date "day", null: false
+    t.string "time", null: false
     t.string "phone_num", null: false
     t.string "first_name", null: false
     t.string "last_name", null: false
     t.date "birthday", null: false
+    t.datetime "start_time", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
